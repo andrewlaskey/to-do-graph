@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      	<title>To Do Graph</title>
+      	
+      	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+      	<script type="text/javascript" src="gridster/jquery.gridster.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="gridster/jquery.gridster.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/to-do.css" />
+	</head>
+	<body>
+		<div class="gridster">
+			<ul>
+				<li data-row="1" data-col="1" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="1" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="1" data-sizex="1" data-sizey="1"></li>
+		
+				<li data-row="1" data-col="2" data-sizex="2" data-sizey="1"></li>
+				<li data-row="2" data-col="2" data-sizex="2" data-sizey="2"></li>
+		
+				<li data-row="1" data-col="4" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="4" data-sizex="2" data-sizey="1"></li>
+				<li data-row="3" data-col="4" data-sizex="1" data-sizey="1"></li>
+		
+				<li data-row="1" data-col="5" data-sizex="1" data-sizey="1"></li>
+				<li data-row="3" data-col="5" data-sizex="1" data-sizey="1"></li>
+		
+				<li data-row="1" data-col="6" data-sizex="1" data-sizey="1"></li>
+				<li data-row="2" data-col="6" data-sizex="1" data-sizey="2"></li>
+			</ul>
+		</div>
+	<script type="text/javascript">
+		$(function(){ //DOM Ready
+
+			$(".gridster ul").gridster({
+				widget_margins: [10, 10],
+				widget_base_dimensions: [120, 75],
+				max_size_x: 8,
+				draggable: {stop: function(e, ui) {
+					$(".gridster ul li").each(function(i) {
+						$(this).text($(this).attr("data-col") + ', ' + $(this).attr("data-row"));
+					});}
+				}
+			});
+			
+			$(".gridster ul li").each(function(i) {
+				$(this).text($(this).attr("data-col") + ', ' + $(this).attr("data-row"));
+			});
+			
+		});
+	</script>
+	</body>
+</html>
