@@ -1,5 +1,6 @@
 body {
 	background: #B3E8CF;
+	margin: 0 auto;
 }
 
 .gridster ul {
@@ -7,5 +8,6 @@ body {
 }
 .gridster ul li {
 	background: #F2FFF9;
+	padding: 5px;
 }
 
