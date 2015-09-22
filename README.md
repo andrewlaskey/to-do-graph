@@ -8,6 +8,8 @@ This project began as post-it notes stuck to the wall in front of my desk at an 
 ### To Do
 
 * replace database with firebase (meteor?)
+* [gridisgood - react gridster](https://github.com/jackunion/gridisgood) or [react-grid-layout](https://github.com/STRML/react-grid-layout)?
+* react?
 * users (firebase authentication and user management)
 * edit axis labels
 * add, edit, mark complete, clear items
